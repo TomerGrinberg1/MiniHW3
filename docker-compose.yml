@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ml_model:
+    image: ml_model_image
+    volumes:
+      - ./input_images:/input_images
+      - ./output:/output
+    command: python run_inference.py
